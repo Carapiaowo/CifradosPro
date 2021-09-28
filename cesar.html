@@ -10,20 +10,75 @@
     <title>Cifrado César</title>
 </head>
 
-<body>
-    <form action="#" method="get" onsubmit="return false;">
-        <p>Ingresa el texto</p>
-        <p> <textarea id="target" cols="50" rows="10"
-                style="width:40em; height:15em">ABC.</textarea></p>
-        <div style="margin-bottom: 12px; margin-top: 12px">
+<body style="background-color: black;">
+    <div style="height: 200px;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="index.html"><img height="75" width="75"
+                        src="https://avatarfiles.alphacoders.com/149/149122.jpg"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <input id="shift" type="number" default="1" max="26" min="1">
+                        <li class="nav-item ">
+
+                            <a class="nav-link active fs-2" aria-current="page" href="index.html">Cifrado de texto</a>
+
+                        </li>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <li class="nav-item">
+                                        <td class="align-middle"><a class="nav-link fs-4 disabled" href="#">Carapia Aguilar</a></td>
+                                    </li>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <li class="nav-item ">
+                                       <td class="align-middle"><a class="nav-link disabled fs-4">José Manuel</a></td>
+                                    </li>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </tbody>
+                        </table>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-sm">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p style="color:aliceblue">Ingresa el texto que quieras cifrar.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <cite title="Source Title">Cifrado Cesar</cite>
+            </figcaption>
+        </figure>
+        <div class="mb-3">
+            <label style="color:aliceblue">Texto</label>
+            <textarea style="background-image: linear-gradient(to left top, #cbf2f0, #cbf0fc, #d5ebff, #e7e5ff, #f8dff6);" class="form-control" id="target" rows="3">ABC</textarea>
         </div>
-        <div>
-            <button onclick="app.doCrypt(false);">Encriptar</button>
-            <button onclick="app.doCrypt(true);">Desencriptar</button>
+        <label style="color:aliceblue">Llave</label>
+        <input style="background-image: linear-gradient(to left top, #cbf2f0, #cbf0fc, #d5ebff, #e7e5ff, #f8dff6);" class="form-control" type="number" max="26" min="1" id="shift" placeholder="Ingresa el espaciado">
+        <div class="mb-3">
+            <label></label>
+            <div class="d-flex justify-content-around">
+                <button type="button" class="btn btn-outline-primary btn-lg"
+                    onclick="app.doCrypt(false);">Encriptar</button>
+                <button type="button" class="btn btn-outline-success btn-lg"
+                    onclick="app.doCrypt(true);">Desencriptar</button>
+            </div>
         </div>
-    </form>
+    </div>
 </body>
 <script src="JS/cesar1.js"></script>
 
