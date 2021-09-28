@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Cifrado César</title>
 </head>
 
 <body>
     <form action="#" method="get" onsubmit="return false;">
-        <p>Enter text</p>
+        <p>Ingresa el texto</p>
         <p> <textarea id="target" cols="50" rows="10"
-                style="width:40em; height:15em">THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.</textarea></p>
+                style="width:40em; height:15em">ABC.</textarea></p>
         <div style="margin-bottom: 12px; margin-top: 12px">
 
             <input id="shift" type="number" default="1" max="26" min="1">
         </div>
         <div>
-            <button onclick="app.doCrypt(false);">Encrypt</button>
-            <button onclick="app.doCrypt(true);">Decrypt</button>
+            <button onclick="app.doCrypt(false);">Encriptar</button>
+            <button onclick="app.doCrypt(true);">Desencriptar</button>
         </div>
     </form>
 </body>

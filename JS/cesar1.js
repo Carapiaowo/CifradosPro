@@ -7,27 +7,24 @@
 var app = new function () {
 
     this.doCrypt = function (isDecrypt) {
+
+        //Obtenemos los valores que vamos a manejar.
+
         str = document.getElementById("target").value;
-        console.log(str);
         amount = document.getElementById("shift").value;
-        console.log(amount)
+
+        //Opción de encriptar o desencriptar
 
         if (isDecrypt) {
-            amount = (amount - 2 * (amount)) ;
-            console.log("ec" + amount);
+            amount = (amount - 2 * (amount));
             document.getElementById("target").value = caesarShift(str, amount);
         } else {
             amount = (amount * 1);
-            console.log("ec" + amount);
             document.getElementById("target").value = caesarShift(str, amount);
-           
         }
-
-
-
     };
 
-
+    //Declaramos la función para la encriptación
 
     var caesarShift = function (str, llave) {
         if (llave < 0) {
@@ -56,8 +53,7 @@ var app = new function () {
 
         return output;
     };
-    console.log(caesarShift('Attack at dawn!', 12));
-    console.log(caesarShift('Mffmow mf pmiz!', -12));
+
 };
 
 

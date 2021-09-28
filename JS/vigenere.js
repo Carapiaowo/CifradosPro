@@ -14,7 +14,7 @@ var app = new function () {
             return;
         }
 
-        var keyArray = filterKey(keyStr);
+        var keyArray = filtro(keyStr);
         if (keyArray.length == 0) {
             alert("La llave no contiene letras.");
             return;
@@ -54,12 +54,9 @@ var app = new function () {
     /* 
      * Regresa un array de números, cada uno en un rango de [0, 26), en representación de la llave.
      * La llave pasa por alto cualquier caracter que no sea letra.
-     * Ejemplo:
-     * - filterKey("AAA") = [0, 0, 0].
-     * - filterKey("abc") = [0, 1, 2].
-     * - filterKey("the $123# EHT") = [19, 7, 4, 4, 7, 19].
      */
-    function filterKey(key) {
+     
+    function filtro(key) {
         var result = [];
         for (var i = 0; i < key.length; i++) {
             var c = key.charCodeAt(i);
